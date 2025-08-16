@@ -8,38 +8,44 @@ import Footer from './components/Footer';
 import useScrollToTop from '@hooks/useScrollToTop';
 import AboutSection from './components/AboutSection';
 import CoursesSection from './components/CoursesSection';
-import { TestimonialsColumn } from './components/ui/testimonials-columns-1';
+import ServicesSection from './components/ServicesSection';
+import HeroSection from './components/HeroSection';
+import HowItWorks from './components/HowItWorks';
+import ImpactCounters from './components/ImpactCounters';
+import FlagsScroll from './components/FlagsScroll';
+import StudentShowcase from './components/StudentShowcase';
 import Testimonials from './components/ui/demo';
 
-// Placeholder for Services Section
-const Services = () => {
-  console.log("Services component rendered");
+// Home Page Component
+const HomePage = () => {
   return (
-    <section className="py-20 bg-yellow-300 text-gray-800" style={{ border: '2px solid red', zIndex: 10, display: 'block', padding: '20px' }}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">Our Services</h2>
-        <p className="text-lg">Explore our services.</p>
-      </div>
-    </section>
+    <>
+      <HeroSection />
+      <ImpactCounters />
+      <FlagsScroll />
+      <HowItWorks />
+      <StudentShowcase />
+      <Testimonials.Testimonials />
+      <GetStartedSection />
+    </>
   );
 };
 
 function App() {
   useScrollToTop();
 
-  console.log("GetStartedSection component rendered");
 
   return (
-    <div className="min-h-screen bg-white" style={{ backgroundColor: 'lightcoral' }}> {/* Added background color */}
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<GetStartedSection />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactSection />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/about" element={<AboutSection />} />
           <Route path="/courses" element={<CoursesSection />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services" element={<ServicesSection />} />
           <Route path="/testimonials" element={<Testimonials.Testimonials />} />
         </Routes>
       </main>
