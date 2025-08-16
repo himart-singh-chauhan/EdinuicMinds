@@ -21,12 +21,12 @@ import React from 'react';
                   <Rocket className="h-5 w-5" />
                   <span>Get Started</span>
                 </Link>
-                <a
-                  href="#services"
+                <button
+                  onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                   className="border-2 border-white text-white font-bold py-3 px-6 rounded-xl hover:bg-white hover:text-primary-dark transition-all duration-300"
                 >
                   Explore Services
-                </a>
+                </button>
               </div>
               <div className="mt-8">
                 <Link to="/terms" className="text-sm text-white/80 hover:underline">

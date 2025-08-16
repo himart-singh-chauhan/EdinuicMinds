@@ -24,21 +24,21 @@ import React, { useState } from 'react';
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-8">
-                <Link to="/courses" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
+                <a href="#courses" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
                   Courses
-                </Link>
-                <Link to="/about" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
+                </a>
+                <a href="#about" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
                   About
-                </Link>
-                <Link to="/services" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
+                </a>
+                <a href="#services" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
                   Services
-                </Link>
-                <Link to="/testimonials" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
+                </a>
+                <a href="#testimonials" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
                   Testimonials
-                </Link>
-                <Link to="/contact" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
+                </a>
+                <a href="#contact" className="text-neutral-700 hover:text-accent-teal transition-colors duration-300 font-medium">
                   Contact
-                </Link>
+                </a>
                 <Link
                   to="/payment"
                   className="bg-gradient-to-r from-primary-dark to-accent-teal text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -62,24 +62,25 @@ import React, { useState } from 'react';
             {isOpen && (
               <div className="md:hidden">
                 <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-neutral-200">
-                  <Link to="/courses" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors">
+                  <a href="#courses" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors" onClick={() => setIsOpen(false)}>
                     Courses
-                  </Link>
-                  <Link to="/about" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors">
+                  </a>
+                  <a href="#about" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors" onClick={() => setIsOpen(false)}>
                     About
-                  </Link>
-                  <Link to="/services" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors">
+                  </a>
+                  <a href="#services" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors" onClick={() => setIsOpen(false)}>
                     Services
-                  </Link>
-                  <Link to="/testimonials" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors">
+                  </a>
+                  <a href="#testimonials" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors" onClick={() => setIsOpen(false)}>
                     Testimonials
-                  </Link>
-                  <Link to="/contact" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors">
+                  </a>
+                  <a href="#contact" className="block w-full text-left px-3 py-2 text-neutral-700 hover:text-accent-teal transition-colors" onClick={() => setIsOpen(false)}>
                     Contact
-                  </Link>
+                  </a>
                   <Link
                     to="/payment"
-                    className="w-full mt-4 bg-gradient-to-r from-primary-dark to-accent-teal text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300"
+                    className="block w-full mt-4 bg-gradient-to-r from-primary-dark to-accent-teal text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 text-center"
+                    onClick={() => setIsOpen(false)}
                   >
                     Payment
                   </Link>

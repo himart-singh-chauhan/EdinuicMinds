@@ -21,11 +21,25 @@ const HomePage = () => {
   return (
     <>
       <HeroSection />
+      <div id="about">
+        <AboutSection />
+      </div>
+      <div id="services">
+        <ServicesSection />
+      </div>
+      <div id="courses">
+        <CoursesSection />
+      </div>
       <ImpactCounters />
       <FlagsScroll />
       <HowItWorks />
       <StudentShowcase />
-      <Testimonials.Testimonials />
+      <div id="testimonials">
+        <Testimonials.Testimonials />
+      </div>
+      <div id="contact">
+        <ContactSection />
+      </div>
       <GetStartedSection />
     </>
   );
@@ -41,12 +55,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactSection />} />
           <Route path="/payment" element={<PaymentPage />} />
-          <Route path="/about" element={<AboutSection />} />
-          <Route path="/courses" element={<CoursesSection />} />
-          <Route path="/services" element={<ServicesSection />} />
-          <Route path="/testimonials" element={<Testimonials.Testimonials />} />
         </Routes>
       </main>
       <Footer />
